@@ -1,8 +1,8 @@
-# Memora - EVA 主题记事本
+# Memora - 极光科技记事本
 
 <div align="center">
 
-**一款基于《新世纪福音战士》EVA 主题设计的现代化 macOS 记事本应用**
+**一款现代化 macOS 记事本应用，采用橙紫科技配色方案，支持语音录入**
 
 [![macOS](https://img.shields.io/badge/macOS-14.0+-blue.svg)](https://www.apple.com/macos/)
 [![Swift](https://img.shields.io/badge/Swift-5.9+-orange.svg)](https://swift.org/)
@@ -22,13 +22,14 @@
 - ⏰ **时间筛选** - 支持按"今天/最近7天/最近30天"筛选记事
 - 🔍 **实时搜索** - 快速搜索标题和内容
 - 📊 **进度追踪** - 实时显示任务完成进度（如：75% [3/4]）
-- 🎨 **EVA NERV 主题** - 初号机配色，科技感十足的深色界面
+- 🎨 **橙紫主题** - 橙色文字 + 紫色结构层次，科技感深色界面
+- 🎙️ **语音录入** - 支持实时语音转文字并自动创建记事（含优先级/时间解析）
 
 ### 设计亮点
 
-- 🌙 **深色主题** - 基于 EVA NERV 指挥室风格设计
-- 💜 **渐变配色** - 紫色到橙色的渐变，呼应初号机色彩
-- 🔷 **六边形图标** - EVA 经典几何元素
+- 🌙 **深色主题** - 深邃黑色背景，专注沉浸式体验
+- 🟠 **橙紫配色** - 橙色信息强调 + 紫色视觉结构，现代科技感
+- 🔷 **简洁图标** - 现代化的勾选框图标设计
 - ⚡ **流畅动画** - 丝滑的交互体验
 - 🔐 **本地存储** - 使用 SwiftData 本地存储，隐私安全
 
@@ -91,9 +92,16 @@ open Memora.xcodeproj
 4. 选择优先级（高/中/低）
 5. 点击 **「保存」**
 
+### 语音创建记事
+
+1. 点击工具栏的 **麦克风按钮**
+2. 开始说话，实时查看转写结果
+3. 点击 **「SAVE NOTE」** 自动生成记事
+4. 语音文本会自动解析优先级和时间关键词（如“明天”“紧急”）
+
 ### 勾选任务
 
-- 在列表中直接点击任务项前的**六边形图标**即可切换完成状态
+- 在列表中直接点击任务项前的**勾选框**即可切换完成状态
 - 在详情页也可以勾选任务
 
 ### 查看进度
@@ -120,9 +128,10 @@ open Memora.xcodeproj
 
 - **语言**: Swift 5.9+
 - **框架**: SwiftUI
+- **语音能力**: Speech + AVFoundation
 - **数据持久化**: SwiftData (iOS 17+ / macOS 14+)
 - **架构**: MVVM-lite + Repository Pattern
-- **设计系统**: 自定义 DesignSystem (EVA 主题)
+- **设计系统**: 自定义 DesignSystem (极光科技主题)
 
 ### 项目结构
 
@@ -183,15 +192,15 @@ enum TimeFilter: String, CaseIterable {
 }
 ```
 
-#### EVA 主题配色
+#### 极光科技配色
 
 ```swift
 struct DesignSystem {
     struct Colors {
-        static let primary = Color(hex: "#9C27B0")      // 紫色 (EVA-01)
-        static let secondary = Color(hex: "#673AB7")    // 深紫
-        static let accent = Color(hex: "#FF9800")       // 橙色 (EVA-01)
-        static let background = Color(hex: "#0A0A0F")   // 深黑
+        static let primary = Color(hex: "#8B5CF6")      // 极光紫
+        static let secondary = Color(hex: "#6D28D9")    // 深紫
+        static let accent = Color(hex: "#F97316")       // 活力橙
+        static let background = Color(hex: "#0A0A0F")   // 深邃黑
     }
 }
 ```
@@ -203,7 +212,7 @@ struct DesignSystem {
 - [时间筛选功能说明](TIME_FILTER_FEATURE.md)
 - [安装指南](INSTALLATION_GUIDE.md)
 - [分享指南](SHARE_GUIDE.md)
-- [EVA 主题升级指南](UPGRADE_GUIDE.md)
+- [主题升级指南](UPGRADE_GUIDE.md)
 - [图标设计指南](EVA_ICON_DESIGN.md)
 
 ---
@@ -213,14 +222,14 @@ struct DesignSystem {
 - [x] 基础记事功能
 - [x] 多任务清单
 - [x] 优先级管理
-- [x] EVA 主题设计
+- [x] 极光紫主题设计
 - [x] 时间筛选功能
 - [x] 实时搜索
 - [ ] iCloud 同步
 - [ ] 标签系统
 - [ ] 提醒功能
 - [ ] Markdown 支持
-- [ ] 主题切换（更多 EVA 角色主题）
+- [ ] 多主题切换
 - [ ] iOS 版本
 
 ---
@@ -245,8 +254,6 @@ struct DesignSystem {
 
 ## 🙏 致谢
 
-- 设计灵感来自《新世纪福音战士》(Neon Genesis Evangelion)
-- 图标设计基于 EVA NERV 标志性元素
 - 感谢 Apple 提供的 SwiftUI 和 SwiftData 框架
 
 ---
@@ -262,7 +269,7 @@ struct DesignSystem {
 
 <div align="center">
 
-**享受你的 EVA 主题记事体验！**
+**享受极光科技记事体验！**
 
 Made with 💜 by [duke-yeah](https://github.com/duke-yeah)
 
